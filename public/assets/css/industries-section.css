@@ -1,0 +1,134 @@
+/* Industries Section - Simplified Layout */
+
+/* Section wrapper - enforce containment */
+#portfolio {
+    position: relative !important;
+    overflow: visible !important;
+    min-height: 600px;
+    display: block;
+}
+
+/* Portfolio grid - CSS Grid for layout */
+.portfolio-grid {
+    position: relative !important;
+    display: grid;
+    width: 100%;
+    min-height: 400px;
+    gap: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Default: 3-column grid for "All" filter cards */
+.portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Grid items - ensure they stay in flow */
+.portfolio-grid .grid-item {
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    float: none !important;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: auto !important;
+    /* Override Tailwind width classes */
+    max-width: 100% !important;
+}
+
+/* Ensure all cards have equal height */
+.portfolio-grid .grid-item.all-filter>div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-grid .grid-item.all-filter img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ensure hover overlay is hidden by default */
+.portfolio-grid .grid-item.all-filter .absolute {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.portfolio-grid .grid-item.all-filter:hover .absolute {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hidden class for filtering */
+.portfolio-grid .grid-item.hidden {
+    display: none !important;
+}
+
+/* Content blocks (for individual filters) should span full width */
+.portfolio-grid .grid-item.content-block {
+    grid-column: 1 / -1;
+    /* Span all columns */
+}
+
+/* Prevent any absolute positioning escapes */
+.portfolio-grid .grid-item>* {
+    max-width: 100%;
+}
+
+/* Ensure proper clearing after grid */
+.portfolio-grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Force section to contain all children */
+#portfolio>.xl\:container {
+    position: relative;
+    overflow: visible;
+}
+
+/* Ensure button section stays in flow */
+.portfolio-btn-wrapper {
+    position: relative !important;
+    z-index: 10;
+}
+
+/* Content block styling */
+.content-block {
+    padding: 2rem 0;
+}
+
+.content-block .image-column img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.content-block .content-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

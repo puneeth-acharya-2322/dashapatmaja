@@ -8,6 +8,7 @@
   <title>GoStartup - Tailwind CSS Template</title>
   <link href="favicon.ico" rel="icon" />
   <link href="assets/css\style.css" rel="stylesheet" />
+  <link href="assets/css\industries-section.css" rel="stylesheet" />
 </head>
 
 <body class="dark:bg-dark">
@@ -869,7 +870,7 @@
   </section> -->
   <!-- ===== Team Section End ===== -->
   <!-- ===== Portfolio Section Start ===== -->
-  <section class="pt-14 sm:pt-20 lg:pt-[130px]" id="portfolio">
+  <section class="pt-14 sm:pt-20 lg:pt-[130px] pb-14 sm:pb-20 lg:pb-[130px] relative overflow-hidden" id="portfolio">
     <div class="px-4 xl:container">
 
       <div class="wow fadeInUp relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16" data-wow-delay=".2s">
@@ -901,16 +902,16 @@
             Research &amp; Development
           </button>
         </div>
-        <div class="portfolio-grid -mx-4 flex flex-wrap">
-          <div class="grid-sizer"></div>
-          <div class="grid-item ecom w-full px-4 lg:w-2/3">
-            <div class="wow fadeInUp group relative mb-10 overflow-hidden rounded-sm" data-wow-delay=".2s">
-              <img alt="portfolio-image" class="w-full" src="assets/images\image-1.jpg" />
+        <div class="portfolio-grid -mx-4">
+          <!-- Cards for "All" Filter - 3 equal-width cards -->
+          <div class="grid-item all-filter w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="wow fadeInUp group relative mb-8 overflow-hidden rounded-sm" data-wow-delay=".2s">
+              <img alt="portfolio-image" class="w-full" src="assets/images/image-1.jpg" />
               <div
                 class="absolute bottom-8 left-5 flex translate-y-8 items-center justify-between rounded-sm bg-black/30 px-4 py-5 opacity-0 backdrop-blur-[30px] transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:left-8 sm:px-6 lg:left-5 lg:px-4 xl:px-6 2xl:left-8">
                 <div class="border-r border-[#e9e9e9]/30 pr-4 sm:pr-5 lg:pr-4 xl:pr-5">
                   <h3 class="font-heading text-base font-medium text-white sm:text-xl lg:text-base xl:text-xl">
-                    Branding &amp; Ecommerce
+                    Branding & Ecommerce
                   </h3>
                   <p class="text-sm text-[#d9d9d9] sm:text-base lg:text-sm xl:text-base">
                     What we Offer
@@ -929,9 +930,9 @@
               </div>
             </div>
           </div>
-          <div class="grid-item branding w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="wow fadeInUp group relative mb-10 overflow-hidden rounded-sm" data-wow-delay=".25s">
-              <img alt="portfolio-image" class="w-full" src="assets/images\image-2.jpg" />
+          <div class="grid-item all-filter w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="wow fadeInUp group relative mb-8 overflow-hidden rounded-sm" data-wow-delay=".25s">
+              <img alt="portfolio-image" class="w-full" src="assets/images/image-2.jpg" />
               <div
                 class="absolute bottom-8 left-5 flex translate-y-8 items-center justify-between rounded-sm bg-black/30 px-4 py-5 opacity-0 backdrop-blur-[30px] transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:left-8 sm:px-6 lg:left-5 lg:px-4 xl:px-6 2xl:left-8">
                 <div class="border-r border-[#e9e9e9]/30 pr-4 sm:pr-5 lg:pr-4 xl:pr-5">
@@ -955,14 +956,14 @@
               </div>
             </div>
           </div>
-          <div class="grid-item branding w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="wow fadeInUp group relative mb-10 overflow-hidden rounded-sm" data-wow-delay=".25s">
-              <img alt="portfolio-image" class="w-full" src="assets/images\image-2.jpg" />
+          <div class="grid-item all-filter w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="wow fadeInUp group relative mb-8 overflow-hidden rounded-sm" data-wow-delay=".3s">
+              <img alt="portfolio-image" class="w-full" src="assets/images/image-3.jpg" />
               <div
                 class="absolute bottom-8 left-5 flex translate-y-8 items-center justify-between rounded-sm bg-black/30 px-4 py-5 opacity-0 backdrop-blur-[30px] transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:left-8 sm:px-6 lg:left-5 lg:px-4 xl:px-6 2xl:left-8">
                 <div class="border-r border-[#e9e9e9]/30 pr-4 sm:pr-5 lg:pr-4 xl:pr-5">
                   <h3 class="font-heading text-base font-medium text-white sm:text-xl lg:text-base xl:text-xl">
-                    Ed-Tech
+                    Research & Development
                   </h3>
                   <p class="text-sm text-[#d9d9d9] sm:text-base lg:text-sm xl:text-base">
                     What we Offer
@@ -981,44 +982,99 @@
               </div>
             </div>
           </div>
-          <!-- <div class="grid-item ecom w-full px-4 md:w-1/2 lg:w-1/3">
-            <div class="wow fadeInUp group relative mb-10 overflow-hidden rounded-sm" data-wow-delay=".35s">
-              <img alt="portfolio-image" class="w-full" src="assets/images\image-4.jpg" />
-              <div
-                class="absolute bottom-8 left-5 flex translate-y-8 items-center justify-between rounded-sm bg-black/30 px-4 py-5 opacity-0 backdrop-blur-[30px] transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 sm:left-8 sm:px-6 lg:left-5 lg:px-4 xl:px-6 2xl:left-8">
-                <div class="border-r border-[#e9e9e9]/30 pr-4 sm:pr-5 lg:pr-4 xl:pr-5">
-                  <h3 class="font-heading text-base font-medium text-white sm:text-xl lg:text-base xl:text-xl">
-                    Photo Retouching
-                  </h3>
-                  <p class="text-sm text-[#d9d9d9] sm:text-base lg:text-sm xl:text-base">
-                    Branded Ecommerce
-                  </p>
-                </div>
-                <div class="pl-4 sm:pl-5 lg:pl-4 xl:pl-5">
-                  <a class="dark:hover:bg-primary hover:bg-primary flex h-10 w-10 items-center justify-center rounded-full bg-[#f8f8f8]/15 text-white hover:opacity-100 dark:hover:opacity-100"
-                    href="javascript:void(0)">
-                    <svg class="fill-current" height="20" viewbox="0 0 20 20" width="20">
-                      <path
-                        d="M13.4767 9.16689L9.00671 4.69689L10.185 3.51855L16.6667 10.0002L10.185 16.4819L9.00671 15.3036L13.4767 10.8336H3.33337V9.16689H13.4767Z">
-                      </path>
-                    </svg>
-                  </a>
+
+          <!-- Content Block for "Branding & Ecommerce" Filter -->
+          <div class="grid-item branding content-block">
+            <div class="wow fadeInUp flex flex-col lg:flex-row gap-8 items-center" data-wow-delay=".2s">
+              <div class="image-column w-full lg:w-2/5">
+                <div class="group relative overflow-hidden rounded-sm">
+                  <img alt="Branding & Ecommerce" class="w-full" src="assets/images/branding-ecommerce.gif" />
                 </div>
               </div>
+              <div class="content-column w-full lg:w-3/5">
+                <h3 class="font-heading text-dark mb-4 text-2xl font-semibold sm:text-3xl md:text-4xl dark:text-white">
+                  Branding & Ecommerce
+                </h3>
+                <p class="text-dark-text mb-8 text-base leading-relaxed">
+                  We create powerful brand identities and seamless ecommerce experiences that drive customer
+                  engagement and business growth. Our comprehensive approach combines strategic branding with
+                  cutting-edge ecommerce solutions.
+                </p>
+                <a class="bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white transition"
+                  href="javascript:void(0)">
+                  Learn More
+                  <span class="pl-3">
+                    <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z"
+                        fill="white"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </div>
-          </div> -->
-        </div>
-        <div class="wow fadeInUp w-full pt-10 text-center" data-wow-delay=".2s">
-          <a class="bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white"
-            href="javascript:void(0)">
-            See More Projects
-            <span class="pl-3">
-              <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z"
-                  fill="white"></path>
-              </svg>
-            </span>
-          </a>
+          </div>
+
+          <!-- Content Block for "Ed-Tech" Filter -->
+          <div class="grid-item digital content-block">
+            <div class="wow fadeInUp flex flex-col lg:flex-row gap-8 items-center" data-wow-delay=".2s">
+              <div class="image-column w-full lg:w-2/5">
+                <div class="group relative overflow-hidden rounded-sm">
+                  <img alt="Ed-Tech" class="w-full" src="assets/images/edtech.gif" />
+                </div>
+              </div>
+              <div class="content-column w-full lg:w-3/5">
+                <h3 class="font-heading text-dark mb-4 text-2xl font-semibold sm:text-3xl md:text-4xl dark:text-white">
+                  Educational Technology
+                </h3>
+                <p class="text-dark-text mb-8 text-base leading-relaxed">
+                  Transform learning experiences with innovative educational technology solutions. We build
+                  interactive platforms and smart tools that enhance engagement and improve learning outcomes
+                  for students and educators.
+                </p>
+                <a class="bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white transition"
+                  href="javascript:void(0)">
+                  Learn More
+                  <span class="pl-3">
+                    <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z"
+                        fill="white"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Block for "Research & Development" Filter -->
+          <div class="grid-item ecom content-block">
+            <div class="wow fadeInUp flex flex-col lg:flex-row gap-8 items-center" data-wow-delay=".2s">
+              <div class="image-column w-full lg:w-2/5">
+                <div class="group relative overflow-hidden rounded-sm">
+                  <img alt="Research & Development" class="w-full" src="assets/images/research-development.gif" />
+                </div>
+              </div>
+              <div class="content-column w-full lg:w-3/5">
+                <h3 class="font-heading text-dark mb-4 text-2xl font-semibold sm:text-3xl md:text-4xl dark:text-white">
+                  Research & Development
+                </h3>
+                <p class="text-dark-text mb-8 text-base leading-relaxed">
+                  Drive innovation through cutting-edge research and development. We leverage AI, machine
+                  learning, and emerging technologies to create solutions that solve complex problems and push
+                  the boundaries of what's possible.
+                </p>
+                <a class="bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white transition"
+                  href="javascript:void(0)">
+                  Learn More
+                  <span class="pl-3">
+                    <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z"
+                        fill="white"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
