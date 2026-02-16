@@ -427,6 +427,352 @@
   height: auto !important;
 }
 
+/* ========================================
+   MODERN SUBMENU DESIGN - FRESH IMPLEMENTATION
+   ======================================== */
+
+/* Global: Ensure parent menu items are positioned for dropdown anchoring */
+.submenu-item {
+  position: relative;
+}
+
+/* Desktop Submenu Styling (≥1024px) */
+@media (min-width: 1024px) {
+  .submenu-modern {
+    /* Positioning - Center-aligned under parent */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+
+    /* Sizing */
+    min-width: 240px;
+
+    /* Light Mode: White background */
+    background: #FFFFFF;
+
+    /* Rounded corners */
+    border-radius: 12px;
+
+    /* Soft shadow for elevation */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1),
+      0 4px 12px rgba(0, 0, 0, 0.05);
+
+    /* Border for definition */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    /* Padding */
+    padding: 12px 0;
+
+    /* Initial hidden state */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    /* Smooth transitions */
+    transition: opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+
+    /* High z-index */
+    z-index: 9999;
+
+    /* Prevent layout shift */
+    margin: 0;
+  }
+
+  /* Dark Mode Override: Glassmorphism */
+  .dark .submenu-modern {
+    background: rgba(20, 25, 35, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+      0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show submenu on parent hover */
+  .submenu-item:hover .submenu-modern,
+  .submenu-item.active .submenu-modern {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Submenu list items */
+  .submenu-modern li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Submenu links */
+  .submenu-modern li a {
+    display: block;
+    padding: 10px 24px;
+
+    /* Light Mode: Dark Text */
+    color: #1F2937;
+    /* Dark gray for light mode */
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+
+    /* Smooth transition */
+    transition: all 0.25s ease-in-out;
+
+    /* Remove any inherited styles */
+    background: transparent;
+    border: none;
+  }
+
+  /* Dark Mode: Light Text */
+  .dark .submenu-modern li a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Hover state - Light Mode */
+  .submenu-modern li a:hover {
+    color: #F59E0B;
+    /* Primary accent color */
+    background: rgba(245, 158, 11, 0.08);
+    /* Subtle orange tint */
+    padding-left: 28px;
+  }
+
+  /* Hover state - Dark Mode */
+  .dark .submenu-modern li a:hover {
+    background: rgba(245, 158, 11, 0.1);
+  }
+
+  /* Active state - Light Mode */
+  .submenu-modern li a.active {
+    color: #F59E0B;
+    background: rgba(245, 158, 11, 0.12);
+  }
+
+  /* Active state - Dark Mode */
+  .dark .submenu-modern li a.active {
+    background: rgba(245, 158, 11, 0.15);
+  }
+}
+
+/* Mobile & Tablet Submenu Styling (<1024px) */
+@media (max-width: 1023px) {
+  .submenu-modern {
+    /* Inline accordion layout - NO absolute positioning */
+    position: static;
+    transform: none;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+
+    /* Light mode: subtle gray background */
+    background: rgba(0, 0, 0, 0.03);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    /* No rounded corners or borders on mobile */
+    border-radius: 0;
+    border: none;
+
+    /* Spacing */
+    margin: 0;
+    padding: 0;
+
+    /* Smooth height transition */
+    transition: max-height 0.4s ease-in-out,
+      padding 0.4s ease-in-out;
+  }
+
+  /* Dark mode submenu background */
+  .dark .submenu-modern {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Expanded state */
+  .submenu-modern.submenu-open {
+    max-height: 600px;
+    padding: 8px 0;
+  }
+
+  /* Submenu list items */
+  .submenu-modern li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Submenu links - indented and touch-friendly */
+  .submenu-modern li a {
+    display: block;
+    padding: 12px 20px 12px 40px;
+    /* Left indent for hierarchy */
+
+    /* Light mode: dark readable text */
+    color: #374151;
+    /* Gray-700 for high contrast */
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+
+    /* Touch-friendly spacing */
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+
+    /* Smooth transition */
+    transition: all 0.25s ease-in-out;
+
+    /* Remove any inherited styles */
+    background: transparent;
+    border: none;
+  }
+
+  /* Dark mode submenu links */
+  .dark .submenu-modern li a {
+    color: #E5E7EB;
+    /* Gray-200 for high contrast on dark */
+  }
+
+  /* Tap/Active state - Light mode */
+  .submenu-modern li a:active {
+    color: #F59E0B;
+    background: rgba(245, 158, 11, 0.1);
+  }
+
+  /* Dark mode tap state */
+  .dark .submenu-modern li a:active {
+    color: #F59E0B;
+    background: rgba(245, 158, 11, 0.15);
+  }
+
+  /* Active link - Light mode */
+  .submenu-modern li a.active {
+    color: #F59E0B;
+    font-weight: 500;
+  }
+
+  /* Dark mode active link */
+  .dark .submenu-modern li a.active {
+    color: #F59E0B;
+    font-weight: 500;
+  }
+
+  /* Chevron rotation for parent items */
+  .submenu-item.active .submenu-taggler svg,
+  .submenu-item.submenu-open .submenu-taggler svg {
+    transform: rotate(180deg);
+  }
+
+  /* Parent menu item styling when submenu is open - Light mode */
+  .submenu-item.active>.submenu-taggler {
+    color: #F59E0B;
+  }
+
+  /* Dark mode parent when open */
+  .dark .submenu-item.active>.submenu-taggler {
+    color: #F59E0B;
+  }
+
+  /* Ensure parent menu items are visible - Light mode */
+  .submenu-taggler {
+    color: #1F2937;
+    /* Gray-800 for high contrast */
+  }
+
+  /* Dark mode parent menu items */
+  .dark .submenu-taggler {
+    color: #F3F4F6;
+    /* Gray-100 for high contrast */
+  }
+}
+
+/* Accessibility - Keyboard navigation */
+.submenu-modern li a:focus {
+  outline: 2px solid #F59E0B;
+  outline-offset: -2px;
+  color: #F59E0B;
+}
+
+/* Prevent any layout shift or flicker */
+.submenu-item {
+  position: relative;
+}
+
+/* Ensure consistent spacing between navbar and dropdowns */
+.navbar {
+  position: relative;
+}
+
+/* ========================================
+   NAVBAR TEXT VISIBILITY & ACTIVE STATES
+   ======================================== */
+
+/* Default navbar menu items - Light mode */
+.navbar li a {
+  color: #1F2937;
+  /* Dark gray for high contrast */
+}
+
+/* Dark mode navbar items */
+.dark .navbar li a {
+  color: #F3F4F6;
+  /* Light gray for dark backgrounds */
+}
+
+/* Hover state - Light mode */
+.navbar li a:hover {
+  color: #F59E0B;
+  /* Accent orange */
+}
+
+/* Dark mode hover */
+.dark .navbar li a:hover {
+  color: #F59E0B;
+}
+
+/* Active menu item - Light mode (add .active class to mark current page) */
+.navbar li a.active {
+  color: #F59E0B;
+  font-weight: 600;
+}
+
+/* Dark mode active */
+.dark .navbar li a.active {
+  color: #F59E0B;
+  font-weight: 600;
+}
+
+/* Submenu togglers - ensure they match parent styling */
+.submenu-taggler {
+  color: #1F2937 !important;
+}
+
+.dark .submenu-taggler {
+  color: #F3F4F6 !important;
+}
+
+/* Submenu toggler hover */
+.submenu-taggler:hover {
+  color: #F59E0B !important;
+}
+
+/* Submenu toggler when active/open */
+.submenu-item.active>.submenu-taggler {
+  color: #F59E0B !important;
+}
+
+/* Chevron icons match text color */
+.submenu-taggler svg {
+  stroke: currentColor;
+}
+
+
+
+
 @layer theme {
 
   :root,
@@ -474,6 +820,7 @@
     --font-body: "Inter", sans-serif;
     --color-primary: #F59E0B;
     --color-dark-text: #79808a;
+    /* Dark gray for high contrast on light backgrounds */
     --color-dark: #111722;
     --color-stroke: #e5e7eb;
     --background-image-noise-pattern: url(src/images/NoisePattern.svg);
@@ -1331,6 +1678,11 @@
 
     & a.active span svg {
       rotate: 180deg;
+    }
+
+    /* Ensure dropdown appears above other content */
+    & .submenu {
+      z-index: 9999;
     }
   }
 

@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       
       const submenu = this.nextElementSibling;
       if (submenu) {
-        // Toggle mobile visibility
+        // Toggle mobile visibility for modern submenu
         submenu.classList.toggle("hidden");
         submenu.classList.toggle("submenu-open"); // Force open with custom class
-        // Toggle desktop visibility
-        submenu.classList.toggle("lg:invisible");
-        submenu.classList.toggle("lg:opacity-0");
+        
+        // Toggle parent active state
+        this.parentElement.classList.toggle("active");
         
         // Rotate the arrow icon
         const arrow = toggler.querySelector("svg");
@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
                  if (otherSubmenu) {
                      otherSubmenu.classList.add("hidden");
                      otherSubmenu.classList.remove("submenu-open");
-                     otherSubmenu.classList.add("lg:invisible");
-                     otherSubmenu.classList.add("lg:opacity-0");
+                     otherToggler.parentElement.classList.remove("active");
                      
                      // Reset other arrows
                      const otherArrow = otherToggler.querySelector("svg");
@@ -43,16 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close menus when clicking outside
-  document.addEventListener("click", function () {
-      document.querySelectorAll(".submenu").forEach((submenu) => {
-          submenu.classList.add("hidden");
-          submenu.classList.remove("submenu-open");
-          submenu.classList.add("lg:invisible");
-          submenu.classList.add("lg:opacity-0");
-      });
-      document.querySelectorAll(".submenu-taggler svg").forEach((arrow) => {
-          arrow.classList.remove("rotate-180");
-      });
+  // Close menus when clicking outside (mobile only)
+  document.addEventListener("click", function (e) {
+      // Only close if not clicking on submenu or toggler
+      if (!e.target.closest('.submenu-item')) {
+          document.querySelectorAll(".submenu-modern").forEach((submenu) => {
+              submenu.classList.add("hidden");
+              submenu.classList.remove("submenu-open");
+          });
+          document.querySelectorAll(".submenu-item").forEach((item) => {
+              item.classList.remove("active");
+          });
+          document.querySelectorAll(".submenu-taggler svg").forEach((arrow) => {
+              arrow.classList.remove("rotate-180");
+          });
+      }
   });
 });
