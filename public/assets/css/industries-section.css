@@ -132,3 +132,18 @@
     flex-direction: column;
     justify-content: center;
 }
+
+/* Add spacing between video and content */
+.content-block .image-column {
+    margin-right: 4rem;
+    /* 64px spacing on desktop */
+}
+
+/* Remove margin on mobile */
+@media (max-width: 1023px) {
+    .content-block .image-column {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        /* Add bottom margin on mobile instead */
+    }
+}
