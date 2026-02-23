@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Branding & E-commerce - Dashapatmaja Solutions</title>
+  <meta name="description"
+    content="Professional branding and e-commerce solutions by Dashapatmaja Solutions - building brands that resonate and convert." />
+  <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="assets/css/animate.css" rel="stylesheet" />
+  <link href="assets/css/tiny-slider.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      extend: {
+        colors: {
+          gold: '#D4AF37',
+          'gold-light': '#F5E27A',
+          dark: '#111722',
+          'dark-2': '#1C2136',
+          'dark-3': '#232B47',
+          'dark-bg': '#1d2144',
+          'gray-2': '#f3f4f6',
+        },
+        // Removed fontFamily.heading to use project default
+      }
+    }
+  </script>
+  <!-- style.css loaded AFTER CDN so it always wins for navbar/shared classes -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/industries-section.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #111722;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    html:not(.dark) body {
+      background: #ffffff;
+    }
+
+    /* ===================== GOLD UTILITIES ===================== */
+    .gold {
+      color: #D4AF37;
+    }
+
+    .gold-bg {
+      background-color: #D4AF37;
+    }
+
+    .gold-border {
+      border-color: #D4AF37;
+    }
+
+    .glow {
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+    }
+
+    .glow-hover:hover {
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+    }
+
+    .gradient-gold {
+      background: linear-gradient(135deg, #D4AF37, #F5E27A, #D4AF37);
+    }
+
+    .gradient-dark {
+      background: linear-gradient(135deg, #1C2136, #232B47);
+    }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #0f1626 0%, #1a2440 50%, #0f1626 100%);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #D4AF37, #F5E27A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ===================== ANIMATIONS ===================== */
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+    }
+
+    .carousel-track {
+      transition: transform 0.5s ease;
+    }
+
+    .hero-float {
+      animation: heroFloat 6s ease-in-out infinite;
+    }
+
+    @keyframes heroFloat {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .pulse-ring {
+      animation: pulseRing 2s ease-out infinite;
+    }
+
+    @keyframes pulseRing {
+      0% {
+        transform: scale(0.8);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===================== BUTTONS ===================== */
+    .btn-gold {
+      background: linear-gradient(135deg, #D4AF37, #B8960C);
+      color: #111722;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 12px 28px;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-outline-gold {
+      border: 2px solid #D4AF37;
+      color: #D4AF37;
+      border-radius: 6px;
+      padding: 10px 26px;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .btn-outline-gold:hover {
+      background: #D4AF37;
+      color: #111722;
+    }
+
+    /* ===================== ICON BOX ===================== */
+    .icon-box {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .icon-box:hover {
+      background: rgba(212, 175, 55, 0.2);
+      border-color: rgba(212, 175, 55, 0.5);
+    }
+
+    .process-card:hover .process-icon {
+      background: linear-gradient(135deg, #D4AF37, #B8960C);
+    }
+
+    .process-card:hover .process-icon svg {
+      stroke: #111722;
+    }
+
+    /* ===================== SECTION BACKGROUNDS ===================== */
+    /* Hero section */
+    .hero-section {
+      background: linear-gradient(135deg, #0a0f1e 0%, #111722 40%, #0d1829 100%);
+    }
+
+    html:not(.dark) .hero-section {
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 40%, #f0f4ff 100%);
+    }
+
+    /* Alternating section backgrounds */
+    .section-bg-alt {
+      background: #151e30;
+    }
+
+    html:not(.dark) .section-bg-alt {
+      background: #f8f9fb;
+    }
+
+    /* Primary dark sections */
+    .section-dark {
+      background: #111722;
+    }
+
+    html:not(.dark) .section-dark {
+      background: #ffffff;
+    }
+
+    /* Footer */
+    .footer-brand {
+      background: #0d1220;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    html:not(.dark) .footer-brand {
+      background: #f1f5f9;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #1c1a0a 0%, #2a2208 40%, #1c1a0a 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    html:not(.dark) .cta-banner {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fffbeb 100%);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    /* CTA text color */
+    html:not(.dark) .cta-heading {
+      color: #1a1204;
+    }
+
+    html:not(.dark) .cta-body {
+      color: #78350f;
+    }
+
+    html:not(.dark) .cta-contact {
+      color: #92400e;
+    }
+
+    /* ===================== CARDS ===================== */
+    /* Service / capability / process cards */
+    .card-dark {
+      background: linear-gradient(135deg, #1C2136, #1a1f33);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    html:not(.dark) .card-dark {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Capability grid cards */
+    .card-capability {
+      background: #1C2136;
+      border: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    html:not(.dark) .card-capability {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    /* About page's visual panel */
+    .about-visual {
+      background: linear-gradient(135deg, #1C2136, #232B47);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      padding: 40px;
+    }
+
+    html:not(.dark) .about-visual {
+      background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    /* Stat sub-cards inside the about visual */
+    .stat-card-gold {
+      background: rgba(212, 175, 55, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    html:not(.dark) .stat-card-gold {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .stat-card-blue {
+      background: rgba(74, 108, 247, 0.05);
+      border: 1px solid rgba(74, 108, 247, 0.1);
+    }
+
+    html:not(.dark) .stat-card-blue {
+      background: rgba(74, 108, 247, 0.07);
+      border: 1px solid rgba(74, 108, 247, 0.15);
+    }
+
+    /* ===================== TEXT COLORS ===================== */
+    /* Headings that are white in dark, dark in light */
+    .heading-adaptive {
+      color: #ffffff;
+    }
+
+    html:not(.dark) .heading-adaptive {
+      color: #111722;
+    }
+
+    /* Body text that is gray-400 in dark, gray-600 in light */
+    .body-adaptive {
+      color: #9ca3af;
+    }
+
+    html:not(.dark) .body-adaptive {
+      color: #4b5563;
+    }
+
+    /* Lighter body text */
+    .body-muted {
+      color: #6b7280;
+    }
+
+    html:not(.dark) .body-muted {
+      color: #374151;
+    }
+
+    /* Footer heading */
+    .footer-heading {
+      color: #f9fafb;
+    }
+
+    html:not(.dark) .footer-heading {
+      color: #111827;
+    }
+
+    /* Footer body text */
+    .footer-body {
+      color: #9ca3af;
+    }
+
+    html:not(.dark) .footer-body {
+      color: #4b5563;
+    }
+
+    /* Footer links */
+    .footer-link {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover {
+      color: #facc15;
+    }
+
+    html:not(.dark) .footer-link {
+      color: #374151;
+    }
+
+    /* Social icons */
+    .social-icon {
+      color: #6b7280;
+      transition: color 0.2s;
+    }
+
+    .social-icon:hover {
+      color: #D4AF37;
+    }
+
+    html:not(.dark) .social-icon {
+      color: #374151;
+    }
+
+    /* About section */
+    .about-heading {
+      color: #ffffff;
+    }
+
+    html:not(.dark) .about-heading {
+      color: #111722;
+    }
+
+    .about-body {
+      color: #9ca3af;
+    }
+
+    html:not(.dark) .about-body {
+      color: #4b5563;
+    }
+
+    /* Hero text — white on dark hero, dark on light hero */
+    .hero-h1 {
+      color: #ffffff;
+    }
+
+    html:not(.dark) .hero-h1 {
+      color: #111722;
+    }
+
+    .hero-body {
+      color: #9ca3af;
+    }
+
+    html:not(.dark) .hero-body {
+      color: #4b5563;
+    }
+
+    .hero-stat-label {
+      color: #6b7280;
+    }
+
+    html:not(.dark) .hero-stat-label {
+      color: #374151;
+    }
+
+    /* Hero visual panel — adapt to light mode */
+    .hero-visual-panel {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(74, 108, 247, 0.05));
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    html:not(.dark) .hero-visual-panel {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(74, 108, 247, 0.08));
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Hero scroll indicator */
+    html:not(.dark) .hero-scroll-label {
+      color: #9ca3af;
+    }
+
+    /* CTA heading and body text */
+    .cta-heading-text {
+      color: #ffffff;
+    }
+
+    html:not(.dark) .cta-heading-text {
+      color: #1a1204;
+    }
+
+    .cta-body-text {
+      color: #d1d5db;
+    }
+
+    html:not(.dark) .cta-body-text {
+      color: #78350f;
+    }
+
+    .cta-contact-text {
+      color: #9ca3af;
+    }
+
+    html:not(.dark) .cta-contact-text {
+      color: #92400e;
+    }
+
+    /* Desktop dropdown menus */
+    @media (min-width: 1024px) {
+
+      .submenu-item:hover>.submenu-modern,
+      .submenu-item .submenu-modern.submenu-open {
+        display: block !important;
+      }
+
+      .submenu-modern {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 200px;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        padding: 8px 0;
+        z-index: 9999;
+      }
+
+      .dark .submenu-modern {
+        background: #2C3443;
+        border-color: transparent;
+      }
+
+      .submenu-modern li a {
+        display: block;
+        padding: 8px 20px;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        color: #374151;
+        transition: color 0.2s, background 0.2s;
+      }
+
+      .submenu-modern li a:hover {
+        color: #F59E0B;
+        background: #f9fafb;
+      }
+
+      .dark .submenu-modern li a {
+        color: #C7CED9;
+      }
+
+      .dark .submenu-modern li a:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+
+    /* Mobile: show submenu when not hidden */
+    @media (max-width: 1023px) {
+      .submenu-modern:not(.hidden) {
+        display: block;
+        padding: 8px 0 8px 16px;
+      }
+
+      .submenu-modern li a {
+        display: block;
+        padding: 6px 0;
+        color: #374151;
+        font-size: 0.9rem;
+      }
+
+      .dark .submenu-modern li a {
+        color: #C7CED9;
+      }
+    }
+  </style>
+
+
+<body class="dark:bg-dark">
+  <script>
+    if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+  <!-- ===== Header Start ===== -->
+  <header class="header absolute top-0 left-0 w-full">
+    <div class="flex w-full flex-wrap px-5 lg:flex-nowrap lg:items-center lg:px-5 xl:px-10 2xl:px-20">
+      <div class="relative z-99 w-auto max-w-[250px] flex-1">
+        <a href="index.html" class="navbar-logo block w-48 lg:w-60 max-w-full py-5">
+          <img src="./assets/images/logo_dp.png" alt="Dashpatmaja Logo" class="h-8 w-auto" />
+        </a>
+      </div>
+
+      <div
+        class="menu-wrapper hidden flex-1 flex justify-center dark:bg-gradient-to-r dark:from-[#0f172a] dark:to-[#1e293b] fixed top-0 left-0 z-50 h-screen w-full bg-white p-5 lg:visible lg:static lg:flex lg:h-auto lg:justify-center lg:bg-transparent lg:p-0 lg:opacity-100 dark:lg:bg-transparent">
+        <div class="w-full self-center flex justify-center">
+          <nav>
+            <ul
+              class="navbar flex flex-col items-center justify-center space-y-5 text-center lg:flex-row lg:justify-center lg:space-y-0 lg:gap-x-6 xl:gap-x-10">
+              <li>
+                <a class="menu-scroll whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary inline-flex items-center justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                  href="index.html">
+                  Home
+                </a>
+              </li>
+              <li class="submenu-item group relative">
+                <a class="submenu-taggler whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary flex items-center gap-2 justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                  href="javascript:void(0)">
+                  About us
+                  <span>
+                    <svg class="stroke-current" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu-modern hidden w-full lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2">
+                  <li><a href="blog-details.html">About Overview</a></li>
+                  <li><a href="blog-grids.html">Vision & Mission</a></li>
+                  <li><a href="signin.html">Our Journey</a></li>
+                  <li><a href="signup.html">Leadership</a></li>
+                  <li><a href="javascript:void(0)">Achievements</a></li>
+                </ul>
+              </li>
+              <li class="submenu-item group relative">
+                <a class="submenu-taggler whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary flex items-center gap-2 justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                  href="javascript:void(0)">
+                  Our Founders
+                  <span>
+                    <svg class="stroke-current" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu-modern hidden w-full lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2">
+                  <!-- <li><a href="javascript:void(0)">Our Values</a></li>
+                  <li><a href="javascript:void(0)">Our Mission</a></li>
+                  <li><a href="javascript:void(0)">Our Story</a></li> -->
+                  <li><a href="ourteam.html">Our Leadership Team</a></li>
+                  <li><a href="javascript:void(0)">Our Accomplishments</a></li>
+                </ul>
+              </li>
+              <li class="submenu-item group relative">
+                <a class="submenu-taggler whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary flex items-center gap-2 justify-center text-center text-base dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-300"
+                  href="javascript:void(0)">
+                  Our Brands
+                  <span>
+                    <svg class="stroke-current" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                    </svg>
+                  </span>
+                </a>
+                <ul class="submenu-modern hidden w-full lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2">
+                  <li><a href="branding.html" class="dark:text-white font-bold opacity-100">Branding</a></li>
+                  <li><a href="edtech.html">EdTech</a></li>
+                  <li><a href="research.html">Research & Development</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="menu-scroll whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary inline-flex items-center justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                  href="branding.html">
+                  Our Domains
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="absolute top-1/2 right-5 z-999 flex -translate-y-1/2 items-center lg:static lg:translate-y-0">
+        <label
+          class="bg-gray-2 dark:bg-dark-bg relative z-40 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-black md:h-14 md:w-14 dark:text-white"
+          for="darkToggler">
+          <input aria-label="darkToggler" class="sr-only" id="darkToggler" name="darkToggler" type="checkbox" />
+          <svg class="h-5 w-5 stroke-current md:h-6 md:w-6 dark:hidden" fill="none" viewbox="0 0 23 23">
+            <path
+              d="M9.55078 1.5C5.80078 1.5 1.30078 5.25 1.30078 11.25C1.30078 17.25 5.80078 21.75 11.8008 21.75C17.8008 21.75 21.5508 17.25 21.5508 13.5C13.3008 18.75 4.30078 9.75 9.55078 1.5Z"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <svg class="hidden h-5 w-5 md:h-6 md:w-6 dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          </svg>
+        </label>
+        <button class="menu-toggler text-dark relative z-50 lg:hidden dark:text-white">
+          <svg class="cross hidden fill-current" height="28" viewbox="0 0 28 28" width="28">
+            <path
+              d="M14.0002 11.8226L21.6228 4.20001L23.8002 6.37745L16.1776 14L23.8002 21.6226L21.6228 23.8L14.0002 16.1774L6.37763 23.8L4.2002 21.6226L11.8228 14L4.2002 6.37745L6.37763 4.20001L14.0002 11.8226Z">
+            </path>
+          </svg>
+          <svg class="menu fill-current" height="22" viewbox="0 0 22 22" width="22">
+            <path
+              d="M2.75002 5.50001H19.25V7.33334H2.75002V5.50001ZM2.75002 10.0833H19.25V11.9167H2.75002V10.0833ZM2.75002 14.6667H19.25V16.5H2.75002V14.6667Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- ===== Header End ===== -->
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section class="relative overflow-hidden min-h-screen flex items-center hero-section">
+
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 right-20 w-96 h-96 rounded-full opacity-10"
+        style="background: radial-gradient(circle, #D4AF37, transparent 70%);"></div>
+      <div class="absolute bottom-20 left-10 w-64 h-64 rounded-full opacity-5"
+        style="background: radial-gradient(circle, #4A6CF7, transparent 70%);"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-3"
+        style="background: conic-gradient(at 50% 50%, transparent 0deg, rgba(212,175,55,0.03) 180deg, transparent 360deg);">
+      </div>
+    </div>
+    <div class="relative z-10 w-full px-5 xl:container mx-auto pt-32 pb-20">
+      <div class="flex flex-wrap items-center -mx-4">
+        <!-- Left Content -->
+        <div class="w-full px-4 lg:w-1/2">
+          <div class="mb-12 lg:mb-0 fade-in">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6"
+              style="background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); color: #D4AF37;">
+              <span class="w-2 h-2 rounded-full bg-yellow-400 pulse-ring inline-block"></span>
+              Branding & E-commerce
+            </span>
+            <h1 class="hero-h1 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Build a Brand That<br />
+              <span class="text-gradient">Stands Out &</span><br />
+              <span class="text-gradient">Converts</span>
+            </h1>
+            <p class="hero-body text-lg mb-10 max-w-xl leading-relaxed">
+              We craft compelling brand identities and high-performing e-commerce ecosystems that drive recognition,
+              trust, and revenue. From strategy to execution—we build brands that matter.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#services" class="btn-gold text-sm font-bold">Explore Our Services</a>
+              <a href="#about-branding" class="btn-outline-gold text-sm">Learn More</a>
+            </div>
+            <div class="flex gap-8 mt-12">
+              <div>
+                <div class="text-2xl font-bold text-gradient">50+</div>
+                <div class="hero-stat-label text-sm mt-1">Brands Built</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-gradient">3x</div>
+                <div class="hero-stat-label text-sm mt-1">Avg. Revenue Growth</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-gradient">98%</div>
+                <div class="hero-stat-label text-sm mt-1">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right Visual -->
+        <div class="w-full px-4 lg:w-1/2 flex justify-center">
+          <div class="relative hero-float">
+            <div
+              class="hero-visual-panel w-80 h-80 lg:w-96 lg:h-96 rounded-3xl flex items-center justify-center relative">
+              <div class="absolute inset-4 rounded-2xl flex items-center justify-center"
+                style="background: rgba(212,175,55,0.05); border: 1px dashed rgba(212,175,55,0.15);">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="60" r="55" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="8 4"
+                    opacity="0.4" />
+                  <circle cx="60" cy="60" r="40" fill="rgba(212,175,55,0.08)" />
+                  <path d="M40 55h40M55 40v40M48 48l24 24M72 48L48 72" stroke="#D4AF37" stroke-width="2"
+                    stroke-linecap="round" opacity="0.6" />
+                  <circle cx="60" cy="60" r="12" fill="#D4AF37" opacity="0.2" />
+                  <circle cx="60" cy="60" r="6" fill="#D4AF37" opacity="0.6" />
+                </svg>
+              </div>
+              <div class="absolute -top-4 -right-4 w-16 h-16 rounded-2xl flex items-center justify-center"
+                style="background: linear-gradient(135deg, #D4AF37, #B8960C);">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111722" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <div class="absolute -bottom-4 -left-4 w-14 h-14 rounded-xl flex items-center justify-center"
+                style="background: rgba(74,108,247,0.2); border: 1px solid rgba(74,108,247,0.4);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A6CF7" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+      <span class="hero-scroll-label text-xs tracking-widest uppercase">Scroll</span>
+      <div class="w-px h-10 bg-gradient-to-b from-yellow-400 to-transparent"></div>
+    </div>
+  </section>
+  <!-- ===== END HERO ===== -->
+
+  <!-- ===== SECTION 2: ABOUT BRANDING ===== -->
+  <section class="section-bg-alt py-20 lg:py-32" id="about-branding">
+    <div class="px-5 xl:container mx-auto">
+      <div class="flex flex-wrap items-center -mx-4 gap-y-10">
+        <!-- Left: Visual -->
+        <div class="w-full px-4 lg:w-1/2">
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden glow about-visual">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="stat-card-gold rounded-xl p-5 flex flex-col gap-3">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                  <div class="text-2xl font-bold text-gradient">50+</div>
+                  <div class="body-adaptive text-sm">Brands Created</div>
+                </div>
+                <div class="stat-card-blue rounded-xl p-5 flex flex-col gap-3">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A6CF7" stroke-width="1.5">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                    <path d="M7 8h10M7 11h6" />
+                  </svg>
+                  <div class="text-2xl font-bold" style="color:#4A6CF7;">30+</div>
+                  <div class="body-adaptive text-sm">E-commerce Stores</div>
+                </div>
+                <div class="stat-card-gold rounded-xl p-5 flex flex-col gap-3">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                  <div class="text-2xl font-bold text-gradient">3x</div>
+                  <div class="body-adaptive text-sm">Revenue Growth</div>
+                </div>
+                <div class="stat-card-blue rounded-xl p-5 flex flex-col gap-3">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4A6CF7" stroke-width="1.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  <div class="text-2xl font-bold" style="color:#4A6CF7;">98%</div>
+                  <div class="body-adaptive text-sm">Client Retention</div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -bottom-4 -right-4 w-20 h-20 rounded-full opacity-20"
+              style="background: radial-gradient(circle, #D4AF37, transparent);"></div>
+          </div>
+        </div>
+        <!-- Right: Content -->
+        <div class="w-full px-4 lg:w-1/2">
+          <span class="text-xs font-bold tracking-widest uppercase gold mb-4 block">About Branding & E-commerce</span>
+          <h2 class="text-3xl sm:text-4xl font-bold heading-adaptive mb-6 leading-tight">
+            We Build Brands That <span class="text-gradient">Resonate</span> &amp; Drive Results
+          </h2>
+          <p class="body-adaptive text-base leading-relaxed mb-5">
+            At Dashapatmaja Solutions, our Branding & E-commerce division specialises in creating powerful brand
+            identities and seamless digital commerce experiences. We combine deep market research, creative excellence,
+            and data-driven strategies to craft brands that truly connect with audiences.
+          </p>
+          <p class="body-adaptive text-base leading-relaxed mb-8">
+            From building your brand's visual identity and tone of voice to setting up scalable e-commerce platforms—we
+            are your end-to-end partner in digital growth. We've empowered startups, D2C brands, and enterprises to
+            achieve measurable success.
+          </p>
+          <a href="#services" class="btn-gold text-sm">Discover Our Services &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== END ABOUT BRANDING ===== -->
+
+  <!-- ===== SECTION 3: SERVICES CAROUSEL ===== -->
+  <section class="section-dark py-20 lg:py-32" id="services">
+    <div class="px-5 xl:container mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold tracking-widest uppercase gold mb-4 block">What We Offer</span>
+        <h2 class="text-3xl sm:text-4xl font-bold heading-adaptive mb-4">Our Branding <span
+            class="text-gradient">Services</span></h2>
+        <p class="body-adaptive max-w-2xl mx-auto">Comprehensive solutions designed to build, grow, and sustain your
+          brand's presence across all platforms.</p>
+      </div>
+      <!-- Carousel Wrapper -->
+      <div class="relative overflow-hidden" id="servicesCarousel">
+        <div class="flex carousel-track" id="servicesTrack" style="gap: 24px;">
+          <!-- Slide 1 -->
+          <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="card-dark rounded-2xl p-8 h-full card-hover glow-hover">
+              <div class="icon-box mb-6">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold heading-adaptive mb-3">Brand Strategy & Identity</h3>
+              <p class="body-adaptive text-sm leading-relaxed mb-6">We define your brand's core—vision, values,
+                positioning, and personality—creating a cohesive identity that differentiates you from competitors.</p>
+              <a href="javascript:void(0)" class="btn-outline-gold text-xs py-2 px-5">Learn More &rarr;</a>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="card-dark rounded-2xl p-8 h-full card-hover glow-hover">
+              <div class="icon-box mb-6">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold heading-adaptive mb-3">E-commerce Development</h3>
+              <p class="body-adaptive text-sm leading-relaxed mb-6">Custom-built online stores optimized for conversion.
+                From Shopify to WooCommerce, we create seamless shopping experiences that turn visitors into customers.
+              </p>
+              <a href="javascript:void(0)" class="btn-outline-gold text-xs py-2 px-5">Learn More &rarr;</a>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="card-dark rounded-2xl p-8 h-full card-hover glow-hover">
+              <div class="icon-box mb-6">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                  <path d="M18 20V10M12 20V4M6 20v-6" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold heading-adaptive mb-3">Digital Marketing & Growth</h3>
+              <p class="body-adaptive text-sm leading-relaxed mb-6">Data-driven marketing campaigns across SEO, social
+                media, paid ads, and email. We build growth engines that consistently attract and retain customers.</p>
+              <a href="javascript:void(0)" class="btn-outline-gold text-xs py-2 px-5">Learn More &rarr;</a>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="card-dark rounded-2xl p-8 h-full card-hover glow-hover">
+              <div class="icon-box mb-6">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                  <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold heading-adaptive mb-3">Creative & Content Design</h3>
+              <p class="body-adaptive text-sm leading-relaxed mb-6">Premium visual content—graphics, photography
+                direction, videos, and copywriting—that tells your brand story and captures audience attention.</p>
+              <a href="javascript:void(0)" class="btn-outline-gold text-xs py-2 px-5">Learn More &rarr;</a>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <div class="card-dark rounded-2xl p-8 h-full card-hover glow-hover">
+              <div class="icon-box mb-6">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+                  <path d="M3 3h18v18H3zM3 9h18M9 21V9" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold heading-adaptive mb-3">Marketplaces & D2C Launch</h3>
+              <p class="body-adaptive text-sm leading-relaxed mb-6">End-to-end launch support for Amazon, Flipkart, and
+                D2C channels. We handle listings, A+ content, cataloguing, and launch campaigns for maximum impact.</p>
+              <a href="javascript:void(0)" class="btn-outline-gold text-xs py-2 px-5">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <!-- Nav Buttons -->
+        <button id="prevBtn" onclick="carouselPrev()"
+          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 w-12 h-12 rounded-full flex items-center justify-center z-10 transition-all"
+          style="background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3);"
+          onmouseover="this.style.background='rgba(212,175,55,0.25)'"
+          onmouseout="this.style.background='rgba(212,175,55,0.1)'">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button id="nextBtn" onclick="carouselNext()"
+          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 w-12 h-12 rounded-full flex items-center justify-center z-10 transition-all"
+          style="background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3);"
+          onmouseover="this.style.background='rgba(212,175,55,0.25)'"
+          onmouseout="this.style.background='rgba(212,175,55,0.1)'">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+      <!-- Dots -->
+      <div class="flex justify-center gap-2 mt-8" id="carouselDots"></div>
+    </div>
+  </section>
+  <!-- ===== END SERVICES CAROUSEL ===== -->
+
+  <!-- ===== SECTION 4: CAPABILITIES GRID ===== -->
+  <section class="section-bg-alt py-20 lg:py-32" id="capabilities">
+    <div class="px-5 xl:container mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold tracking-widest uppercase gold mb-4 block">Our Expertise</span>
+        <h2 class="text-3xl sm:text-4xl font-bold heading-adaptive mb-4">Branding <span
+            class="text-gradient">Capabilities</span></h2>
+        <p class="body-adaptive max-w-2xl mx-auto">A full spectrum of capabilities that empower your brand at every
+          touchpoint.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="card-capability rounded-2xl p-6 card-hover">
+          <div class="icon-box mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <path
+                d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-2">Logo & Visual Identity</h3>
+          <p class="body-adaptive text-sm leading-relaxed">Custom logo design, brand palettes, typography systems, and
+            brand guidelines that create a consistent and memorable visual presence.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="card-capability rounded-2xl p-6 card-hover">
+          <div class="icon-box mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-2">Product Packaging Design</h3>
+          <p class="body-adaptive text-sm leading-relaxed">Striking packaging that communicates quality and appeals to
+            your target customer—from Ayurvedic products to lifestyle brands.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-2xl p-6 card-hover" class="rounded-2xl p-6 card-hover card-capability">
+          <div class="icon-box mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-2">Website & Landing Pages</h3>
+          <p class="body-adaptive text-sm leading-relaxed">High-converting websites and product landing pages built with
+            modern UI/UX principles, optimised for speed and search engines.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="card-capability rounded-2xl p-6 card-hover">
+          <div class="icon-box mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-2">Performance Marketing</h3>
+          <p class="body-adaptive text-sm leading-relaxed">ROI-focused ad campaigns on Meta, Google, and Amazon that
+            maximise reach, reduce CAC, and consistently improve ROAS.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="card-capability rounded-2xl p-6 card-hover">
+          <div class="icon-box mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-2">Influencer & Community</h3>
+          <p class="body-adaptive text-sm leading-relaxed">Strategic influencer partnerships and community building
+            programs that amplify brand awareness and drive authentic engagement.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="card-capability rounded-2xl p-6 card-hover">
+          <div class="icon-box mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-2">Supply Chain & Fulfilment</h3>
+          <p class="body-adaptive text-sm leading-relaxed">End-to-end supply chain consulting for e-commerce
+            businesses—inventory management, warehousing partnerships, and last-mile delivery solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== END CAPABILITIES GRID ===== -->
+
+  <!-- ===== SECTION 5: PROCESS CARDS ===== -->
+  <section class="section-dark py-20 lg:py-32" id="process">
+    <div class="px-5 xl:container mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold tracking-widest uppercase gold mb-4 block">How We Work</span>
+        <h2 class="text-3xl sm:text-4xl font-bold heading-adaptive mb-4">Our <span
+            class="text-gradient">Brand-Building</span>
+          Process</h2>
+        <p class="body-adaptive max-w-2xl mx-auto">A proven, end-to-end methodology that takes your brand from concept
+          to market leadership.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="process-card rounded-2xl p-6 text-center card-hover relative group"
+          class="process-card rounded-2xl p-6 text-center card-hover relative group card-dark">
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center gradient-gold text-dark">
+            1</div>
+          <div class="process-icon icon-box mx-auto mb-5 flex items-center justify-center">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-3">Discovery & Research</h3>
+          <p class="body-adaptive text-sm leading-relaxed mb-5">We deep-dive into your market, competitors, and target
+            audience to uncover the insights that drive strategy.</p>
+          <a href="javascript:void(0)" class="text-yellow-400 text-xs font-semibold hover:underline">Learn More
+            &rarr;</a>
+        </div>
+        <!-- Step 2 -->
+        <div class="process-card rounded-2xl p-6 text-center card-hover relative group"
+          class="process-card rounded-2xl p-6 text-center card-hover relative group card-dark">
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center gradient-gold text-dark">
+            2</div>
+          <div class="process-icon icon-box mx-auto mb-5 flex items-center justify-center">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-3">Strategy & Concept</h3>
+          <p class="body-adaptive text-sm leading-relaxed mb-5">We craft a distinctive brand strategy with clear
+            positioning, messaging framework, and a creative concept that sets you apart.</p>
+          <a href="javascript:void(0)" class="text-yellow-400 text-xs font-semibold hover:underline">Learn More
+            &rarr;</a>
+        </div>
+        <!-- Step 3 -->
+        <div class="process-card rounded-2xl p-6 text-center card-hover relative group"
+          class="process-card rounded-2xl p-6 text-center card-hover relative group card-dark">
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center gradient-gold text-dark">
+            3</div>
+          <div class="process-icon icon-box mx-auto mb-5 flex items-center justify-center">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-3">Design & Build</h3>
+          <p class="body-adaptive text-sm leading-relaxed mb-5">Our creative team brings the brand to life—logos,
+            visuals, platform setup, content systems, and digital storefronts.</p>
+          <a href="javascript:void(0)" class="text-yellow-400 text-xs font-semibold hover:underline">Learn More
+            &rarr;</a>
+        </div>
+        <!-- Step 4 -->
+        <div class="process-card rounded-2xl p-6 text-center card-hover relative group"
+          class="process-card rounded-2xl p-6 text-center card-hover relative group card-dark">
+          <div
+            class="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center gradient-gold text-dark">
+            4</div>
+          <div class="process-icon icon-box mx-auto mb-5 flex items-center justify-center">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5">
+              <path d="M18 20V10M12 20V4M6 20v-6" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold heading-adaptive mb-3">Launch & Scale</h3>
+          <p class="body-adaptive text-sm leading-relaxed mb-5">We execute launch campaigns, drive performance
+            marketing, and continuously optimise for growth and market share.</p>
+          <a href="javascript:void(0)" class="text-yellow-400 text-xs font-semibold hover:underline">Learn More
+            &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== END PROCESS CARDS ===== -->
+
+  <!-- ===== SECTION 6: CTA BANNER ===== -->
+  <section class="py-20 lg:py-28" id="cta">
+    <div class="px-5 xl:container mx-auto">
+      <div class="cta-banner relative rounded-3xl overflow-hidden px-8 py-14 sm:px-16 text-center">
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+          <div class="absolute top-0 left-1/4 w-80 h-80 rounded-full opacity-15"
+            style="background: radial-gradient(circle, #D4AF37, transparent 70%);"></div>
+          <div class="absolute bottom-0 right-1/4 w-60 h-60 rounded-full opacity-10"
+            style="background: radial-gradient(circle, #F5E27A, transparent 70%);"></div>
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto">
+          <span class="text-xs font-bold tracking-widest uppercase gold mb-4 block">Ready to Grow?</span>
+          <h2 class="cta-heading-text text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            Let's Build Your Brand's <span class="text-gradient">Next Chapter</span> Together
+          </h2>
+          <p class="cta-body-text text-lg mb-10 max-w-2xl mx-auto">
+            Join the growing roster of businesses that trust Dashapatmaja Solutions to shape their brand identity,
+            conquer e-commerce, and drive lasting growth.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="javascript:void(0)" class="btn-gold text-sm font-bold px-8 py-3">Start Your Brand Journey</a>
+            <a href="javascript:void(0)" class="btn-outline-gold text-sm px-8 py-3">Talk to an Expert</a>
+          </div>
+          <p class="cta-contact-text text-sm mt-8">📧 director@dashapatmaja.in &nbsp;|&nbsp; 📞 +91 8861942440</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== END CTA BANNER ===== -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-brand pt-14 sm:pt-20 lg:pt-24 pb-8">
+    <div class="px-5 xl:container mx-auto">
+      <div class="-mx-4 flex flex-wrap">
+        <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-3/12">
+          <div class="mb-14 max-w-[330px]">
+            <a class="mb-6 inline-block" href="index.html">
+              <img alt="logo" class="h-[50px]" src="assets/images/logo_dp.png" />
+            </a>
+            <p class="body-adaptive mb-8 text-sm leading-relaxed">
+              Explore how the right technology can elevate your business—enhancing efficiency, simplifying everyday
+              operations, and paving the way for a more sustainable future.
+            </p>
+            <div class="flex items-center space-x-4">
+              <a aria-label="social-link" class="social-icon body-muted hover:text-yellow-400 transition-colors"
+                href="javascript:void(0)" name="social-link">
+                <svg class="fill-current" height="22" viewbox="0 0 24 24" width="22">
+                  <path
+                    d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" />
+                </svg>
+              </a>
+              <a aria-label="social-link" class="social-icon body-muted hover:text-yellow-400 transition-colors"
+                href="javascript:void(0)" name="social-link">
+                <svg fill="none" height="22" viewbox="0 0 22 22" width="22">
+                  <path clip-rule="evenodd"
+                    d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
+                    fill="currentColor" fill-rule="evenodd" />
+                </svg>
+              </a>
+              <a aria-label="social-link" class="social-icon body-muted hover:text-yellow-400 transition-colors"
+                href="javascript:void(0)" name="social-link">
+                <svg class="fill-current" height="22" viewbox="0 0 24 24" width="22">
+                  <path
+                    d="M6.93994 5.00002C6.93968 5.53046 6.72871 6.03906 6.35345 6.41394C5.97819 6.78883 5.46938 6.99929 4.93894 6.99902C4.40851 6.99876 3.89991 6.78779 3.52502 6.41253C3.15014 6.03727 2.93968 5.52846 2.93994 4.99802C2.94021 4.46759 3.15117 3.95899 3.52644 3.5841C3.9017 3.20922 4.41051 2.99876 4.94094 2.99902C5.47137 2.99929 5.97998 3.21026 6.35486 3.58552C6.72975 3.96078 6.94021 4.46959 6.93994 5.00002ZM6.99994 8.48002H2.99994V21H6.99994V8.48002ZM13.3199 8.48002H9.33994V21H13.2799V14.43C13.2799 10.77 18.0499 10.43 18.0499 14.43V21H21.9999V13.07C21.9999 6.90002 14.9399 7.13002 13.2799 10.16L13.3199 8.48002Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
+          <div class="mb-14">
+            <h3 class="footer-heading mb-7 text-xl font-semibold">Company</h3>
+            <ul class="space-y-4">
+              <li><a class="body-adaptive hover:text-yellow-400 text-sm transition-colors" href="index.html">Home</a>
+              </li>
+              <li><a class="body-adaptive hover:text-yellow-400 text-sm transition-colors"
+                  href="javascript:void(0)">Features</a></li>
+              <li><a class="body-adaptive hover:text-yellow-400 text-sm transition-colors"
+                  href="javascript:void(0)">About Us</a></li>
+              <li><a class="body-adaptive hover:text-yellow-400 text-sm transition-colors"
+                  href="javascript:void(0)">Domains</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
+          <div class="mb-14">
+            <h3 class="footer-heading mb-7 text-xl font-semibold">Our Services</h3>
+            <ul class="space-y-4">
+              <li><a class="text-yellow-400 text-sm font-medium" href="branding.html">Branding & E-commerce</a></li>
+              <li><a class="body-adaptive hover:text-yellow-400 text-sm transition-colors"
+                  href="edtech.html">Ed-Tech</a></li>
+              <li><a class="text-dark-text hover:text-primary transition-colors" href="research.html">Research and
+                  Development</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-2/12">
+          <div class="mb-14">
+            <h3 class="footer-heading mb-7 text-xl font-semibold">Get in touch</h3>
+            <div class="space-y-5">
+              <div>
+                <p class="body-muted text-xs uppercase tracking-wide mb-1">Phone</p>
+                <a class="text-gray-300 hover:text-yellow-400 text-sm transition-colors" href="tel:+918861942440">+91
+                  8861942440</a>
+              </div>
+              <div>
+                <p class="body-muted text-xs uppercase tracking-wide mb-1">Email</p>
+                <a class="text-gray-300 hover:text-yellow-400 text-sm transition-colors"
+                  href="mailto:director@dashapatmaja.in">director@dashapatmaja.in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-3/12">
+          <div class="mb-14">
+            <h3 class="footer-heading mb-7 text-xl font-semibold">Newsletter</h3>
+            <p class="footer-body mb-5 text-sm">Subscribe to receive future updates</p>
+            <form class="relative">
+              <input
+                class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800/50 py-3 pr-12 pl-4 text-sm text-gray-800 dark:text-gray-300 outline-none focus:border-yellow-400 placeholder-gray-400 dark:placeholder-gray-600"
+                id="email" name="email" placeholder="Email address" type="email" />
+              <button
+                class="absolute top-0 right-0 h-full w-12 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-yellow-400 border-l border-gray-300 dark:border-gray-700 transition-colors">
+                <svg class="fill-current" height="18" viewbox="0 0 20 20" width="18">
+                  <path
+                    d="M3.1175 1.17367L18.5025 9.63533C18.5678 9.6713 18.6223 9.72414 18.6602 9.78834C18.6982 9.85255 18.7182 9.92576 18.7182 10.0003C18.7182 10.0749 18.6982 10.1481 18.6602 10.2123C18.6223 10.2765 18.5678 10.3294 18.5025 10.3653L3.1175 18.827C3.05406 18.8619 2.98262 18.8797 2.91023 18.8785C2.83783 18.8774 2.76698 18.8575 2.70465 18.8206C2.64232 18.7838 2.59066 18.7313 2.55478 18.6684C2.51889 18.6056 2.50001 18.5344 2.5 18.462V1.53867C2.50001 1.46626 2.51889 1.39511 2.55478 1.33222C2.59066 1.26934 2.64232 1.21689 2.70465 1.18005C2.76698 1.1432 2.83783 1.12324 2.91023 1.12212C2.98262 1.121 3.05406 1.13877 3.1175 1.17367ZM4.16667 10.8337V16.3478L15.7083 10.0003L4.16667 3.65283V9.167H8.33333V10.8337H4.16667Z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 dark:border-gray-800 pt-7 mt-2">
+        <div class="-mx-4 flex flex-wrap items-center justify-between">
+          <div class="w-full px-4 md:w-1/2 mb-3 md:mb-0">
+            <div class="flex items-center space-x-5">
+              <a class="body-muted hover:text-yellow-400 text-sm transition-colors"
+                href="javascript:void(0)">English</a>
+              <a class="body-muted hover:text-yellow-400 text-sm transition-colors" href="javascript:void(0)">Privacy
+                Policy</a>
+              <a class="body-muted hover:text-yellow-400 text-sm transition-colors"
+                href="javascript:void(0)">Support</a>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 text-center md:text-right">
+            <p class="body-muted text-sm">© 2025 dashapatmaja.in All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== END FOOTER ===== -->
+
+  <!-- Back To Top -->
+  <a class="back-to-top fixed right-8 bottom-8 z-999 hidden h-10 w-10 items-center justify-center rounded-lg text-dark shadow-md transition hover:shadow-lg"
+    href="javascript:void(0)" style="background: linear-gradient(135deg, #D4AF37, #B8960C);">
+    <span class="mt-1 h-3 w-3 rotate-45 border-t-2 border-l-2 border-current inline-block"></span>
+  </a>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="assets/js/bundle.js" defer></script>
+  <script src="assets/js/navbar-toggle.js"></script>
+  <script>
+    // ===== THEME TOGGLER (Standardized) =====
+    (function () {
+      const darkToggler = document.getElementById('darkToggler');
+      const html = document.documentElement;
+
+      if (darkToggler) {
+        // Sync checkbox state with current theme
+        darkToggler.checked = html.classList.contains('dark');
+
+        darkToggler.addEventListener('change', function () {
+          if (this.checked) {
+            html.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            html.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+          }
+        });
+      }
+
+      // Sticky header logic
+      const header = document.querySelector('.header');
+      if (header) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 50) header.classList.add('sticky');
+          else header.classList.remove('sticky');
+        });
+      }
+
+      // Mobile Menu Toggler (Refined)
+      const menuToggler = document.querySelector('.menu-toggler');
+      const menuWrapper = document.querySelector('.menu-wrapper');
+      if (menuToggler && menuWrapper) {
+        menuToggler.addEventListener('click', function () {
+          menuWrapper.classList.toggle('show');
+          const cross = menuToggler.querySelector('.cross');
+          const menu = menuToggler.querySelector('.menu');
+          if (cross) cross.classList.toggle('hidden');
+          if (menu) menu.classList.toggle('hidden');
+        });
+      }
+    })();
+
+    // ===== CAROUSEL =====
+    const slides = document.querySelectorAll('.carousel-slide');
+    const track = document.getElementById('servicesTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    let slidesPerView = getSlidesPerView();
+
+    function getSlidesPerView() {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 640) return 2;
+      return 1;
+    }
+
+    function getSlideWidth() {
+      if (!track) return 0;
+      const containerWidth = track.parentElement.offsetWidth;
+      const gap = 24;
+      return (containerWidth - (gap * (slidesPerView - 1))) / slidesPerView;
+    }
+
+    function updateCarousel() {
+      if (!track) return;
+      slidesPerView = getSlidesPerView();
+      const slideWidth = getSlideWidth();
+      slides.forEach(s => { s.style.width = slideWidth + 'px'; });
+      const maxIndex = slides.length - slidesPerView;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      track.style.transform = `translateX(-${currentIndex * (slideWidth + 24)}px)`;
+      updateDots();
+    }
+
+    function buildDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      const totalDots = slides.length - slidesPerView + 1;
+      for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'w-2 h-2 rounded-full transition-all duration-300';
+        dot.style.background = i === currentIndex ? '#D4AF37' : 'rgba(212,175,55,0.3)';
+        dot.addEventListener('click', () => { currentIndex = i; updateCarousel(); });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateDots() {
+      if (!dotsContainer) return;
+      const dots = dotsContainer.querySelectorAll('button');
+      dots.forEach((d, i) => {
+        d.style.background = i === currentIndex ? '#D4AF37' : 'rgba(212,175,55,0.3)';
+        d.style.width = i === currentIndex ? '20px' : '8px';
+      });
+    }
+
+    function carouselNext() {
+      const maxIndex = Math.max(0, slides.length - slidesPerView);
+      currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+      updateCarousel();
+      resetAutoSlide();
+    }
+
+    function carouselPrev() {
+      const maxIndex = Math.max(0, slides.length - slidesPerView);
+      currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+      updateCarousel();
+      resetAutoSlide();
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(carouselNext, 4000);
+    }
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    if (track) {
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) { diff > 0 ? carouselNext() : carouselPrev(); }
+      });
+    }
+
+    // Pause on hover
+    const carousel = document.getElementById('servicesCarousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+      carousel.addEventListener('mouseleave', () => resetAutoSlide());
+    }
+
+    window.addEventListener('resize', () => { buildDots(); updateCarousel(); });
+
+    // Init
+    buildDots();
+    updateCarousel();
+    resetAutoSlide();
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+
+</html>

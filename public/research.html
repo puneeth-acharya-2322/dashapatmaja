@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Research and Development - Dashapatmaja Solutions</title>
+    <meta name="description"
+        content="Dashapatmaja Solutions' R&D division is dedicated to innovation in advanced computing, IoT, and AI solutions, driving meaningful impacts." />
+    <link href="favicon.ico" rel="icon" />
+
+    <!-- style.css for shared navbar/footer styles -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/industries-section.css" rel="stylesheet" />
+
+    <!-- Tailwind for page-specific layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            extend: {
+                colors: {
+                    primary: '#4A6CF7',
+                    dark: '#111722',
+                    'dark-2': '#1C2136',
+                    'dark-bg': '#1d2144',
+                    'dark-text': '#9ca3af',
+                },
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #4A6CF7, #ABBCFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-adaptive {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .dark .card-adaptive {
+            background: linear-gradient(135deg, #1C2136, #1a1f33);
+            border-color: rgba(74, 108, 247, 0.15);
+        }
+
+        .card-adaptive:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .dark .card-adaptive:hover {
+            box-shadow: 0 10px 30px rgba(74, 108, 247, 0.15);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 40%, #e2e8f0 100%);
+        }
+
+        .dark .hero-section {
+            background: linear-gradient(135deg, #0a0f1e 0%, #111722 40%, #0d1829 100%);
+        }
+
+        .section-bg-alt {
+            background: #F9FAFB;
+        }
+
+        .dark .section-bg-alt {
+            background: #151e30;
+        }
+
+        /* Desktop dropdown menus (reusing from branding.html patterns) */
+        @media (min-width: 1024px) {
+            .submenu-item:hover>.submenu-modern {
+                display: block !important;
+            }
+
+            .submenu-modern {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                min-width: 200px;
+                background: #fff;
+                border-radius: 12px;
+                border: 1px solid #e5e7eb;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+                padding: 8px 0;
+                z-index: 9999;
+            }
+
+            .dark .submenu-modern {
+                background: #2C3443;
+                border-color: transparent;
+            }
+
+            .submenu-modern li a {
+                display: block;
+                padding: 8px 20px;
+                white-space: nowrap;
+                font-size: 0.9rem;
+                color: #374151;
+                transition: color 0.2s, background 0.2s;
+            }
+
+            .submenu-modern li a:hover {
+                color: #4A6CF7;
+                background: #f9fafb;
+            }
+
+            .dark .submenu-modern li a {
+                color: #C7CED9;
+            }
+
+            .dark .submenu-modern li a:hover {
+                color: #fff;
+                background: rgba(255, 255, 255, 0.05);
+            }
+        }
+    </style>
+</head>
+
+<body class="dark:bg-dark">
+    <script>
+        if (localStorage.getItem("theme") === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+
+    <!-- ===== Header Start ===== -->
+    <header class="header absolute top-0 left-0 w-full">
+        <div class="flex w-full flex-wrap px-5 lg:flex-nowrap lg:items-center lg:px-5 xl:px-10 2xl:px-20">
+            <div class="relative z-99 w-auto max-w-[250px] flex-1">
+                <a href="index.html" class="navbar-logo block w-48 lg:w-60 max-w-full py-5">
+                    <img src="./assets/images/logo_dp.png" alt="Dashpatmaja Logo" class="h-8 w-auto" />
+                </a>
+            </div>
+
+            <div
+                class="menu-wrapper hidden flex-1 flex justify-center dark:bg-gradient-to-r dark:from-[#0f172a] dark:to-[#1e293b] fixed top-0 left-0 z-50 h-screen w-full bg-white p-5 lg:visible lg:static lg:flex lg:h-auto lg:justify-center lg:bg-transparent lg:p-0 lg:opacity-100 dark:lg:bg-transparent">
+                <div class="w-full self-center flex justify-center">
+                    <nav>
+                        <ul
+                            class="navbar flex flex-col items-center justify-center space-y-5 text-center lg:flex-row lg:justify-center lg:space-y-0 lg:gap-x-6 xl:gap-x-10">
+                            <li>
+                                <a class="menu-scroll whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary inline-flex items-center justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                                    href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="submenu-item group relative">
+                                <a class="submenu-taggler whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary flex items-center gap-2 justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                                    href="javascript:void(0)">
+                                    About us
+                                    <span>
+                                        <svg class="stroke-current" fill="none" height="16" viewbox="0 0 24 24"
+                                            width="16" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul
+                                    class="submenu-modern hidden w-full lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2">
+                                    <li><a href="blog-details.html">About Overview</a></li>
+                                    <li><a href="blog-grids.html">Vision & Mission</a></li>
+                                    <li><a href="signin.html">Our Journey</a></li>
+                                    <li><a href="signup.html">Leadership</a></li>
+                                    <li><a href="javascript:void(0)">Achievements</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu-item group relative">
+                                <a class="submenu-taggler whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary flex items-center gap-2 justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                                    href="javascript:void(0)">
+                                    Our Founders
+                                    <span>
+                                        <svg class="stroke-current" fill="none" height="16" viewbox="0 0 24 24"
+                                            width="16" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul
+                                    class="submenu-modern hidden w-full lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2">
+                                    <li><a href="ourteam.html">Our Leadership Team</a></li>
+                                    <li><a href="javascript:void(0)">Our Accomplishments</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu-item group relative">
+                                <a class="submenu-taggler whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary flex items-center gap-2 justify-center text-center text-base dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-300"
+                                    href="javascript:void(0)">
+                                    Our Brands
+                                    <span>
+                                        <svg class="stroke-current" fill="none" height="16" viewbox="0 0 24 24"
+                                            width="16" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul
+                                    class="submenu-modern hidden w-full lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2">
+                                    <li><a href="branding.html">Branding</a></li>
+                                    <li><a href="edtech.html">EdTech</a></li>
+                                    <li><a href="research.html" class="dark:text-white font-bold opacity-100">Research &
+                                            Development</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="menu-scroll whitespace-nowrap font-heading px-4 py-2 text-dark-text hover:text-primary inline-flex items-center justify-center text-center text-base dark:text-[#C7CED9] dark:hover:text-white transition-colors duration-300"
+                                    href="branding.html">
+                                    Our Domains
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="absolute top-1/2 right-5 z-999 flex -translate-y-1/2 items-center lg:static lg:translate-y-0">
+                <label
+                    class="bg-gray-2 dark:bg-dark-bg relative z-40 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-black md:h-14 md:w-14 dark:text-white"
+                    for="darkToggler">
+                    <input aria-label="darkToggler" class="sr-only" id="darkToggler" name="darkToggler"
+                        type="checkbox" />
+                    <svg class="h-5 w-5 stroke-current md:h-6 md:w-6 dark:hidden" fill="none" viewbox="0 0 23 23">
+                        <path
+                            d="M9.55078 1.5C5.80078 1.5 1.30078 5.25 1.30078 11.25C1.30078 17.25 5.80078 21.75 11.8008 21.75C17.8008 21.75 21.5508 17.25 21.5508 13.5C13.3008 18.75 4.30078 9.75 9.55078 1.5Z"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    <svg class="hidden h-5 w-5 md:h-6 md:w-6 dark:block" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                    </svg>
+                </label>
+                <button class="menu-toggler text-dark relative z-50 lg:hidden dark:text-white">
+                    <svg class="cross hidden fill-current" height="28" viewbox="0 0 28 28" width="28">
+                        <path
+                            d="M14.0002 11.8226L21.6228 4.20001L23.8002 6.37745L16.1776 14L23.8002 21.6226L21.6228 23.8L14.0002 16.1774L6.37763 23.8L4.2002 21.6226L11.8228 14L4.2002 6.37745L6.37763 4.20001L14.0002 11.8226Z">
+                        </path>
+                    </svg>
+                    <svg class="menu fill-current" height="22" viewbox="0 0 22 22" width="22">
+                        <path
+                            d="M2.75002 5.50001H19.25V7.33334H2.75002V5.50001ZM2.75002 10.0833H19.25V11.9167H2.75002V10.0833ZM2.75002 14.6667H19.25V16.5H2.75002V14.6667Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- ===== Header End ===== -->
+
+    <!-- ===== Hero Section Start ===== -->
+    <section class="relative overflow-hidden min-h-[80vh] flex items-center hero-section pt-20">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+            <div class="absolute top-20 right-20 w-96 h-96 rounded-full"
+                style="background: radial-gradient(circle, #4A6CF7, transparent 70%);"></div>
+        </div>
+
+        <div class="relative z-10 w-full px-5 xl:container mx-auto">
+            <div class="flex flex-wrap items-center -mx-4">
+                <div class="w-full px-4 lg:w-1/2">
+                    <div class="mb-12 lg:mb-0">
+                        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6"
+                            style="background: rgba(74,108,247,0.1); border: 1px solid rgba(74,108,247,0.3); color: #4A6CF7;">
+                            Research & Development
+                        </span>
+                        <h1
+                            class="text-dark dark:text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                            Innovating Today for a <br />
+                            <span class="text-gradient">Smarter Tomorrow</span>
+                        </h1>
+                        <p class="text-dark-text dark:text-[#9ca3af] text-lg mb-10 max-w-xl leading-relaxed">
+                            Our R&D division is dedicated to pushing boundaries, exploring new frontiers, and driving
+                            breakthrough solutions through continuous experimentation and refinement.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#focus-areas"
+                                class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-md transition-all">Focus
+                                Areas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 flex justify-center">
+                    <div class="relative max-w-lg w-full">
+                        <video autoplay loop muted playsinline
+                            class="rounded-2xl shadow-2xl border border-black/5 dark:border-white/5 w-full">
+                            <source src="assets/images/RandDgif.mp4" type="video/mp4">
+                            <img src="assets/images/RandD.png" alt="R&D Illustration" class="rounded-2xl">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Core Focus Areas Section Start ===== -->
+    <section id="focus-areas" class="py-20 lg:py-32 section-bg-alt">
+        <div class="xl:container mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-dark dark:text-white text-3xl font-bold sm:text-4xl mb-4">Our Core Focus Areas</h2>
+                <div class="w-16 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Advanced Computing -->
+                <div class="card-adaptive p-8 rounded-2xl">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20">
+                        <svg class="text-primary" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3 class="text-dark dark:text-white font-bold text-xl mb-4">Advanced Computing</h3>
+                    <p class="text-dark-text dark:text-[#9ca3af] text-sm leading-relaxed">Bringing processing power
+                        closer to data sources
+                        for enhanced speed and real-time decision-making.</p>
+                </div>
+
+                <!-- IoT Integration -->
+                <div class="card-adaptive p-8 rounded-2xl">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20">
+                        <svg class="text-primary" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-dark dark:text-white font-bold text-xl mb-4">IoT Integration</h3>
+                    <p class="text-dark-text dark:text-[#9ca3af] text-sm leading-relaxed">Developing seamless IoT
+                        ecosystems for real-time
+                        data processing and intelligent automation.</p>
+                </div>
+
+                <!-- Smart Device Development -->
+                <div class="card-adaptive p-8 rounded-2xl">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20">
+                        <svg class="text-primary" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12" y2="18" />
+                        </svg>
+                    </div>
+                    <h3 class="text-dark dark:text-white font-bold text-xl mb-4">Smart Devices</h3>
+                    <p class="text-dark-text dark:text-[#9ca3af] text-sm leading-relaxed">Engineering next-gen smart
+                        hardware to simplify
+                        operations and enhance user experiences.</p>
+                </div>
+
+                <!-- Data Security -->
+                <div class="card-adaptive p-8 rounded-2xl">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20">
+                        <svg class="text-primary" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-dark dark:text-white font-bold text-xl mb-4">Robust Security</h3>
+                    <p class="text-dark-text dark:text-[#9ca3af] text-sm leading-relaxed">Designing high-tier security
+                        protocols to protect
+                        devices and networks from evolving threats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Incubation Section Start ===== -->
+    <section class="py-20 lg:py-32 bg-white dark:bg-dark">
+        <div class="xl:container mx-auto px-5">
+            <div class="flex flex-wrap items-center -mx-4">
+                <div class="w-full px-4 lg:w-1/2">
+                    <div class="mb-12 lg:mb-0">
+                        <h2 class="text-dark dark:text-white text-3xl font-bold sm:text-4xl mb-6 leading-tight">
+                            Innovation Ecosystem &
+                            Incubation</h2>
+                        <p class="text-dark-text dark:text-[#9ca3af] text-lg mb-8 leading-relaxed">
+                            Based in Udupi, Dashapatmaja Solutions is proudly incubated at the <strong>Manipal-GoK
+                                Bioincubator</strong> & <strong>MUTBI</strong>.
+                        </p>
+                        <p class="text-dark-text dark:text-[#9ca3af] text-lg mb-10 leading-relaxed">
+                            We collaborate with academic and industry partners to accelerate progress and transform bold
+                            ideas into practical advancements across AI, healthcare, and smart technologies.
+                        </p>
+                        <div class="flex items-center gap-6">
+                            <img src="assets/images/logo_dp.png" alt="Incubation Partner"
+                                class="h-12 w-auto grayscale opacity-40 dark:brightness-200">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2">
+                    <div
+                        class="card-adaptive p-10 rounded-3xl relative overflow-hidden border border-black/5 dark:border-white/5">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+                        <h3 class="text-dark dark:text-white font-bold text-2xl mb-6">Current R&D Initiatives</h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <span
+                                    class="w-6 h-6 bg-primary/20 text-primary rounded-full flex items-center justify-center shrink-0">✓</span>
+                                <div>
+                                    <h4 class="text-dark dark:text-white font-semibold">GenAlpha Portable</h4>
+                                    <p class="text-dark-text dark:text-[#9ca3af] text-sm mt-1">Advanced educational kit
+                                        with integrated
+                                        edge-computing capabilities.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span
+                                    class="w-6 h-6 bg-primary/20 text-primary rounded-full flex items-center justify-center shrink-0">✓</span>
+                                <div>
+                                    <h4 class="text-dark dark:text-white font-semibold">Medical Software Solutions</h4>
+                                    <p class="text-dark-text text-sm mt-1">Developing next-generation AI-powered
+                                        healthcare informatics.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span
+                                    class="w-6 h-6 bg-primary/20 text-primary rounded-full flex items-center justify-center shrink-0">✓</span>
+                                <div>
+                                    <h4 class="text-white font-semibold">AI-IoT Integration</h4>
+                                    <p class="text-dark-text text-sm mt-1">Researching smart device networks for
+                                        enterprise applications.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer Start ===== -->
+    <footer class="wow fadeInUp pt-14 sm:pt-20 lg:pt-[130px]" data-wow-delay=".2s">
+        <div class="px-4 xl:container">
+            <div class="-mx-4 flex flex-wrap">
+                <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-3/12">
+                    <div class="mb-20 max-w-[330px]">
+                        <a class="mb-6 inline-block" href="index.html">
+                            <img alt="logo" class="h-[50px]" src="assets/images/logo_dp.png" />
+                        </a>
+                        <p class="text-dark-text mb-10 text-base">
+                            Explore how the right technology can elevate your business—enhancing efficiency, simplifying
+                            everyday
+                            operations, and paving the way for a more sustainable future. Together, let’s turn ideas
+                            into impact.
+                        </p>
+                        <div class="flex items-center space-x-5">
+                            <a aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white"
+                                href="javascript:void(0)" name="social-link">
+                                <svg class="fill-current" height="24" viewbox="0 0 24 24" width="24">
+                                    <path
+                                        d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white"
+                                href="javascript:void(0)" name="social-link">
+                                <svg fill="none" height="22" viewbox="0 0 22 22" width="22"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd"
+                                        d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
+                                        fill="currentColor" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white"
+                                href="javascript:void(0)" name="social-link">
+                                <svg class="fill-current" height="24" viewbox="0 0 24 24" width="24">
+                                    <path
+                                        d="M6.93994 5.00002C6.93968 5.53046 6.72871 6.03906 6.35345 6.41394C5.97819 6.78883 5.46938 6.99929 4.93894 6.99902C4.40851 6.99876 3.89991 6.78779 3.52502 6.41253C3.15014 6.03727 2.93968 5.52846 2.93994 4.99802C2.94021 4.46759 3.15117 3.95899 3.52644 3.5841C3.9017 3.20922 4.41051 2.99876 4.94094 2.99902C5.47137 2.99929 5.97998 3.21026 6.35486 3.58552C6.72975 3.96078 6.94021 4.46959 6.93994 5.00002ZM6.99994 8.48002H2.99994V21H6.99994V8.48002ZM13.3199 8.48002H9.33994V21H13.2799V14.43C13.2799 10.77 18.0499 10.43 18.0499 14.43V21H21.9999V13.07C21.9999 6.90002 14.9399 7.13002 13.2799 10.16L13.3199 8.48002Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white"
+                                href="javascript:void(0)" name="social-link">
+                                <svg class="fill-current" height="24" viewbox="0 0 24 24" width="24">
+                                    <path
+                                        d="M7.443 5.34961C8.082 5.34961 8.673 5.39961 9.213 5.54761C9.70302 5.63765 10.1708 5.82244 10.59 6.09161C10.984 6.33861 11.279 6.68561 11.475 7.13061C11.672 7.57561 11.77 8.12061 11.77 8.71361C11.77 9.40661 11.623 9.99961 11.279 10.4446C10.984 10.8906 10.492 11.2856 9.902 11.5826C10.738 11.8306 11.377 12.2756 11.77 12.8686C12.164 13.4626 12.41 14.2046 12.41 15.0456C12.41 15.7386 12.262 16.3316 12.016 16.8266C11.77 17.3216 11.377 17.7666 10.934 18.0636C10.4528 18.382 9.92084 18.616 9.361 18.7556C8.771 18.9046 8.181 19.0036 7.591 19.0036H1V5.34961H7.443ZM7.049 10.8896C7.59 10.8896 8.033 10.7416 8.377 10.4946C8.721 10.2476 8.869 9.80161 8.869 9.25761C8.869 8.96061 8.819 8.66361 8.721 8.46661C8.623 8.26861 8.475 8.11961 8.279 7.97161C8.082 7.87261 7.885 7.77361 7.639 7.72461C7.393 7.67461 7.148 7.67461 6.852 7.67461H4V10.8906H7.05L7.049 10.8896ZM7.197 16.7276C7.492 16.7276 7.787 16.6776 8.033 16.6286C8.28138 16.5814 8.51628 16.48 8.721 16.3316C8.92139 16.1868 9.08903 16.0015 9.213 15.7876C9.311 15.5406 9.41 15.2436 9.41 14.8976C9.41 14.2046 9.213 13.7096 8.82 13.3636C8.426 13.0666 7.885 12.9186 7.246 12.9186H4V16.7286H7.197V16.7276ZM16.689 16.6776C17.082 17.0736 17.672 17.2716 18.459 17.2716C19 17.2716 19.492 17.1236 19.885 16.8766C20.279 16.5796 20.525 16.2826 20.623 15.9856H23.033C22.639 17.1726 22.049 18.0136 21.263 18.5576C20.475 19.0526 19.541 19.3496 18.41 19.3496C17.6864 19.3518 16.9688 19.2175 16.295 18.9536C15.6887 18.7262 15.148 18.3524 14.721 17.8656C14.2643 17.4102 13.9267 16.8494 13.738 16.2326C13.492 15.5896 13.393 14.8976 13.393 14.1056C13.393 13.3636 13.492 12.6716 13.738 12.0276C13.9745 11.4077 14.3245 10.8373 14.77 10.3456C15.213 9.90061 15.754 9.50561 16.344 9.25761C17.0007 8.99367 17.7022 8.8592 18.41 8.86161C19.246 8.86161 19.984 9.01061 20.623 9.35661C21.263 9.70261 21.754 10.0986 22.148 10.6926C22.5499 11.2631 22.8494 11.8993 23.033 12.5726C23.131 13.2646 23.18 13.9576 23.131 14.7486H16C16 15.5406 16.295 16.2826 16.689 16.6786V16.6776ZM19.787 11.4836C19.443 11.1376 18.902 10.9396 18.262 10.9396C17.82 10.9396 17.475 11.0386 17.18 11.1866C16.885 11.3356 16.689 11.5336 16.492 11.7316C16.311 11.9229 16.1912 12.1638 16.148 12.4236C16.098 12.6716 16.049 12.8686 16.049 13.0666H20.475C20.377 12.3246 20.131 11.8306 19.787 11.4836ZM15.459 6.28961H20.967V7.62561H15.46V6.28961H15.459Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
+                    <div class="mb-20">
+                        <h3 class="font-heading text-dark mb-9 text-2xl font-medium dark:text-white">
+                            Company
+                        </h3>
+                        <ul class="space-y-4">
+                            <li>
+                                <a class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white"
+                                    href="index.html#home">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white"
+                                    href="index.html#features">
+                                    Features
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white"
+                                    href="index.html#about">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
+                    <div class="mb-20">
+                        <h3 class="font-heading text-dark mb-9 text-2xl font-medium dark:text-white">
+                            Our Services
+                        </h3>
+                        <ul class="space-y-4">
+                            <li>
+                                <a class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white"
+                                    href="branding.html">
+                                    Branding & E-commerce
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white"
+                                    href="edtech.html">
+                                    Ed-Tech
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white"
+                                    href="research.html">
+                                    Research and Development
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-2/12">
+                    <div class="mb-20">
+                        <h3 class="font-heading text-dark mb-9 text-2xl font-medium dark:text-white">
+                            Get in touch
+                        </h3>
+                        <div class="space-y-7">
+                            <div>
+                                <p class="font-heading text-dark-text text-base">
+                                    Phone
+                                </p>
+                                <a class="font-heading text-dark hover:text-primary dark:hover:text-primary text-base dark:text-white"
+                                    href="tel: +91 8861942440">
+                                    +91 8861942440
+                                </a>
+                            </div>
+                            <div>
+                                <p class="font-heading text-dark-text text-base">
+                                    Email
+                                </p>
+                                <a class="font-heading text-dark hover:text-primary dark:hover:text-primary text-base dark:text-white"
+                                    href="mailto: director@dashapatmaja.in">
+                                    director@dashapatmaja.in
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Newsletter Section (Omitted from research.html for simplicity or matched if needed) -->
+            </div>
+            <div class="md:border-t dark:border-[#2E333D]">
+                <div class="-mx-4 flex flex-wrap py-5 md:py-7">
+                    <div class="w-full px-4 md:w-1/2 lg:w-2/3">
+                        <div
+                            class="mb-5 flex items-center justify-center space-x-5 border-b pb-5 md:mb-0 md:justify-start md:border-0 md:pb-0 dark:border-[#2E333D]">
+                            <a class="font-heading text-dark-text hover:text-primary text-base"
+                                href="javascript:void(0)">
+                                English
+                            </a>
+                            <a class="font-heading text-dark-text hover:text-primary text-base"
+                                href="javascript:void(0)">
+                                Privacy Policy
+                            </a>
+                            <a class="font-heading text-dark-text hover:text-primary text-base"
+                                href="javascript:void(0)">
+                                Support
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                        <div>
+                            <p class="font-heading text-dark-text text-center text-base lg:text-right">
+                                © 2025 dashapatmaja.in All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <a class="hover:shadow-signUp back-to-top bg-primary fixed right-8 bottom-8 left-auto z-999 hidden h-10 w-10 items-center justify-center rounded-xs text-white shadow-md transition"
+        href="javascript:void(0)">
+        <span class="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"></span>
+    </a>
+    <!-- ====== Back To Top End ===== -->
+
+    <script src="assets/js/bundle.js" defer></script>
+    <script src="assets/js/navbar-toggle.js"></script>
+</body>
+
+</html>
